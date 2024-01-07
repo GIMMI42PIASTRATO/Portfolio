@@ -1,0 +1,35 @@
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 68rem;
+    padding: 0 2rem;
+    margin: 16px auto;
+}
+
+.name_container {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.link_container {
+    display: flex;
+    gap: 1rem;
+}
+
+.link {
+    display: flex;
+    list-style: none;
+}
+
+.link li {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.link li:hover {
+    background-color: var(--secondary);
+}
