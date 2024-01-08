@@ -1,10 +1,13 @@
 import style from "./navbar.module.css";
+import { TbMoon } from "react-icons/tb";
 
 export default function Navbar() {
     return (
         <nav className={style.nav_container}>
             <div className={style.name_container}>
-                <a href="#">Logo</a>
+                <div className={style.img_container}>
+                    <img src="mcpfp - GIMMI42PIASTRATO.png" alt="Logo" />
+                </div>
                 <a href="#home">Vittorio Bussano</a>
             </div>
             <span className={style.link_container}>
@@ -19,7 +22,11 @@ export default function Navbar() {
                         <a href="#">About</a>
                     </li>
                 </ul>
-                <div>L/D</div>
+                <div className={style.button_container}>
+                    <button className={style.theme_button}>
+                        <TbMoon />
+                    </button>
+                </div>
             </span>
         </nav>
     );
