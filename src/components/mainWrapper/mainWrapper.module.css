@@ -1,0 +1,6 @@
+.main_wrapper {
+    max-width: 68rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
