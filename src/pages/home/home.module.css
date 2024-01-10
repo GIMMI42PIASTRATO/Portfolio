@@ -1,0 +1,38 @@
+.hero_container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.text {
+    color: var(--text);
+}
+
+.text1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.text1 span {
+    color: var(--secondary);
+}
+
+.text2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.text3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.text3 span {
+    font-weight: 500;
+}
+
+.img_container img {
+    border-radius: 50%;
+}
