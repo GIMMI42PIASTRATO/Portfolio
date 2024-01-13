@@ -1,0 +1,10 @@
+.text_container {
+    padding-bottom: 1rem;
+}
+
+.text {
+    padding-bottom: 0.5rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--secondary);
+}
