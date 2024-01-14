@@ -1,0 +1,4 @@
+.card_container {
+    max-height: 18.75rem;
+    background: var(--primary);
+}
