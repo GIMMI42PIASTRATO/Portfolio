@@ -1,4 +1,6 @@
 .card_container {
-    max-height: 18.75rem;
+    width: 18.75rem;
     background: var(--primary);
 }
+
+/* Per grandezze cellulari / tablet mettere le card una sotto l'altra, che quando vengono cliccate si allungano verso il basso e fanno comparire il testo1 */
