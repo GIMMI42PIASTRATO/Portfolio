@@ -1,11 +1,27 @@
 .card_container {
     width: 30%;
     background: var(--primary);
-    color: var(--secondary);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* .card_container div {
-} */
+.icon svg {
+    stroke: var(--secondary);
+    font-size: 7.5rem;
+    stroke-width: 1.6;
+}
+
+.text {
+    max-width: 12.5rem;
+    text-align: center;
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 500;
+}
 
 @media (max-width: 768px) {
     .card_container {

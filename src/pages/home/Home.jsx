@@ -8,7 +8,14 @@ import Subtitle from "../../components/subtitle/Subtitle";
 import Card from "../../components/card/Card";
 
 // Icons import
-import { TbCode, TbServer2, TbBrandPython } from "react-icons/tb";
+import {
+    TbCode,
+    TbServer2,
+    TbBrandPython,
+    TbDeviceMobileCode,
+    TbMathFunction,
+    TbBrandMysql,
+} from "react-icons/tb";
 
 export default function home() {
     return (
@@ -22,6 +29,17 @@ export default function home() {
                     <Card icon={<TbBrandPython />} text="Python development" />
                 </div>
                 <Subtitle text="What I am learning" />
+                <div className={style.cards_container}>
+                    <Card
+                        icon={<TbDeviceMobileCode />}
+                        text="Mobile development"
+                    />
+                    <Card
+                        icon={<TbMathFunction />}
+                        text="Machine learning / Deep learning"
+                    />
+                    <Card icon={<TbBrandMysql />} text="MySQL" />
+                </div>
             </div>
         </MainWrapper>
     );
