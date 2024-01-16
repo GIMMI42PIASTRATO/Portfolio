@@ -1,6 +1,16 @@
 .card_container {
     width: 30%;
     background: var(--primary);
+    color: var(--secondary);
 }
 
+/* .card_container div {
+} */
+
+@media (max-width: 768px) {
+    .card_container {
+        width: auto;
+        padding: 1.25rem 0;
+    }
+}
 /* Per grandezze cellulari / tablet mettere le card una sotto l'altra, che quando vengono cliccate si allungano verso il basso e fanno comparire il testo1 */

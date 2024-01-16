@@ -7,6 +7,9 @@ import Hero from "../../components/hero/Hero";
 import Subtitle from "../../components/subtitle/Subtitle";
 import Card from "../../components/card/Card";
 
+// Icons import
+import { TbCode, TbServer2, TbBrandPython } from "react-icons/tb";
+
 export default function home() {
     return (
         <MainWrapper>
@@ -14,9 +17,9 @@ export default function home() {
             <div className={style.main}>
                 <Subtitle text="What i'm great at" />
                 <div className={style.cards_container}>
-                    <Card icon="TEST" text="Lorem Ipsum" />
-                    <Card icon="TEST" text="Lorem Ipsum" />
-                    <Card icon="TEST" text="Lorem Ipsum" />
+                    <Card icon={<TbCode />} text="Front-end Development" />
+                    <Card icon={<TbServer2 />} text="Back-end Development" />
+                    <Card icon={<TbBrandPython />} text="Python development" />
                 </div>
                 <Subtitle text="What I am learning" />
             </div>
