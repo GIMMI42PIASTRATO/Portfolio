@@ -22,29 +22,39 @@ export default function home() {
 		<MainWrapper>
 			<Hero />
 			<div className={style.main}>
-				<Subtitle text="What i'm great at" />
-				<div className={style.cards_container}>
-					<Card icon={<TbCode />} text="Front-end Development" />
-					<Card icon={<TbServer2 />} text="Back-end Development" />
-					<Card icon={<TbBrandPython />} text="Python development" />
+				<div>
+					<Subtitle text="What i'm great at" />
+					<div className={style.cards_container}>
+						<Card icon={<TbCode />} text="Front-end Development" />
+						<Card
+							icon={<TbServer2 />}
+							text="Back-end Development"
+						/>
+						<Card
+							icon={<TbBrandPython />}
+							text="Python development"
+						/>
+					</div>
 				</div>
-				<Subtitle text="What I am learning" />
-				<div className={style.cards_container}>
-					<Card
-						icon={<TbDeviceMobileCode />}
-						text="Mobile development"
-						className="learning"
-					/>
-					<Card
-						icon={<TbMathFunction />}
-						text="Machine learning / Deep learning"
-						className="learning"
-					/>
-					<Card
-						icon={<TbBrandMysql />}
-						text="MySQL"
-						className="learning"
-					/>
+				<div>
+					<Subtitle text="What I am learning" />
+					<div className={style.cards_container}>
+						<Card
+							icon={<TbDeviceMobileCode />}
+							text="Mobile development"
+							className="learning"
+						/>
+						<Card
+							icon={<TbMathFunction />}
+							text="Machine learning / Deep learning"
+							className="learning"
+						/>
+						<Card
+							icon={<TbBrandMysql />}
+							text="MySQL"
+							className="learning"
+						/>
+					</div>
 				</div>
 			</div>
 		</MainWrapper>
