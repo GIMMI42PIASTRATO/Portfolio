@@ -4,13 +4,13 @@
 	--text: #e6eaed;
 
 	--background: #060709;
-	--background1: #0f1113;
-	--background2: #121315;
+	--background1: #0f1113; /* From RealTimeColors Card background */
+	--background2: #121315; /* From RealTimeColors Footer background */
 
 	--primary: #aec2cf;
 
 	--secondary: #385569;
-	--secondary1: #151f26;
+	--secondary1: #151f26; /* From RealTimeColors Dashboard card background */
 
 	--accent: #719dbb;
 }

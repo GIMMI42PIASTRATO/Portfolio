@@ -1,0 +1,43 @@
+.footer_container {
+	box-sizing: border-box;
+	max-width: 68rem;
+	padding: 0 1rem;
+	margin: 2rem auto;
+	border-top: 1px solid var(--secondary);
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background2);
+	padding: 3rem 5rem;
+	margin-top: 2rem;
+	border-radius: 10px;
+	gap: 2rem;
+}
+
+.footer_cols {
+	display: flex;
+	gap: 4.563rem;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.logo p {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.logo img {
+	width: 1.875rem;
+	height: 1.875rem;
+	border-radius: 50%;
+}
+
+.buymeacoffee img {
+	width: 150px;
+}
