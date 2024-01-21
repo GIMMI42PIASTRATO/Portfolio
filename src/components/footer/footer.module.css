@@ -18,7 +18,14 @@
 
 .footer_cols {
 	display: flex;
-	gap: 4.563rem;
+	flex-wrap: wrap;
+	gap: 4rem;
+}
+
+.footer_col {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .logo {
@@ -40,4 +47,35 @@
 
 .buymeacoffee img {
 	width: 150px;
+}
+
+.links {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.links li {
+	padding: 0.5rem 1rem;
+}
+
+.links li a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.links li span {
+	color: var(--link);
+}
+
+.horizontal_line {
+	border: 1px solid var(--background3);
+}
+
+.credits_container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	font-weight: 300;
 }

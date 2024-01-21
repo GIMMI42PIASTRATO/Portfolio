@@ -1,5 +1,12 @@
 import style from "./footer.module.css";
 
+import {
+	TbBrandGithub,
+	TbBrandStackoverflow,
+	TbBrandLinkedin,
+	TbMailbox,
+} from "react-icons/tb";
+
 export default function Footer() {
 	return (
 		<div className={style.footer_container}>
@@ -30,12 +37,57 @@ export default function Footer() {
 							You can find me as Vittorio Bussano or
 							@GIMMI42PIASTRATO
 						</p>
-						<span>bottone</span>
-						<span>bottone</span>
-						<span>bottone</span>
-						<span>bottone</span>
+
+						<ul className={style.links}>
+							<li>
+								<a href="https://github.com/GIMMI42PIASTRATO">
+									<TbBrandGithub
+										stroke="#51b1f5"
+										style={{
+											fontSize: "1.5rem",
+										}}
+									/>
+									<span>GitHub</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<TbBrandLinkedin
+										stroke="#51b1f5"
+										style={{
+											fontSize: "1.5rem",
+										}}
+									/>
+									<span>LinkedIn</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://stackoverflow.com/users/19192281/gimmi42piastrato">
+									<TbBrandStackoverflow
+										stroke="#51b1f5"
+										style={{
+											fontSize: "1.5rem",
+										}}
+									/>
+									<span>StackOverflow</span>
+								</a>
+							</li>
+						</ul>
+
 						<p>Email</p>
-						<span>bussanovittorio@gmail.com</span>
+						<ul className={style.links}>
+							<li>
+								<a href="#">
+									<TbMailbox
+										stroke="#51b1f5"
+										style={{
+											fontSize: "1.5rem",
+										}}
+									/>
+									<span>bussanovittorio@gmail.com</span>
+								</a>
+							</li>
+						</ul>
 					</div>
 
 					<div className={style.footer_col}>
@@ -47,17 +99,17 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<hr />
+				<hr className={style.horizontal_line} />
 
 				<div className={style.credits_container}>
 					<p>Made with much ❤️ </p>
 					<p>
 						An indi web ring {"<"}- 🕸️ -{">"}
 					</p>
-					<p>
+					<small>
 						Copyright © 2023 All Rights Reserved. CC BY-NC-ND
 						License.
-					</p>
+					</small>
 				</div>
 			</div>
 		</div>
