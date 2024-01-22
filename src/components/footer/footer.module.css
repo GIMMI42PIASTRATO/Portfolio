@@ -79,3 +79,34 @@
 	gap: 0.5rem;
 	font-weight: 300;
 }
+
+@media (max-width: 768px) {
+	.footer_cols {
+		flex-direction: column;
+		gap: 3rem;
+	}
+	.footer_col:last-child {
+		margin-bottom: 0;
+	}
+	.footer_container {
+		margin: 2rem 0;
+	}
+	.box {
+		padding: 2rem;
+	}
+	.links {
+		margin-bottom: 2rem;
+	}
+	.horizontal_line {
+		margin-bottom: 2rem;
+	}
+	.credits_container {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.footer_col {
+		font-size: 0.875rem;
+	}
+}
