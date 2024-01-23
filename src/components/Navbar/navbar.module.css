@@ -41,11 +41,12 @@
 	font-weight: 500;
 	font-size: 1rem;
 	padding: 0.5rem 1rem;
-	border-radius: 0.5rem;
+	border-radius: 0.4rem;
+	transition: background-color 0.2s ease-in-out;
 }
 
 .link li:hover {
-	background-color: var(--secondary);
+	background-color: var(--secondary2);
 }
 
 .button_container {
@@ -67,10 +68,11 @@
 	background-color: transparent;
 	cursor: pointer;
 	outline: none;
+	transition: background-color 0.2s ease-in-out;
 }
 
 .theme_button:hover {
-	background-color: var(--secondary);
+	background-color: var(--secondary2);
 }
 
 .theme_button svg {
