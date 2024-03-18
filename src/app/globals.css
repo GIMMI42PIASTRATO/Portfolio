@@ -2,32 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--text: #e6eaed;
+
+	--background: #060709;
+	--background1: #0f1113; /* From RealTimeColors Card background */
+	--background2: #121315; /* From RealTimeColors Footer background */
+	--background3: #27282b; /* From RealTimeColors Footer Orizontal Line, why here? why not */
+
+	--primary: #aec2cf;
+
+	--secondary: #385569;
+	--secondary1: #151f26; /* From RealTimeColors Dashboard card background */
+	--secondary2: #3855697f;
+
+	--accent: #719dbb;
+
+	--link: #51b1f5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	color: var(--text);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	margin: 0;
+	background-color: var(--background);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+	text-decoration: none;
 }
