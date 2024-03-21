@@ -21,8 +21,8 @@ export default function Navbar() {
 					<Image
 						src="/GIMMI42PIASTRATO.png"
 						alt="Logo"
-						width={48}
-						height={48}
+						width={40}
+						height={40}
 					/>
 				</div>
 				<a href="#home">Vittorio Bussano</a>
