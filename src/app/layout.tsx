@@ -3,7 +3,7 @@ import "./globals.css";
 import { poppins } from "../utility/font";
 
 // Importing componets
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
