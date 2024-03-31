@@ -28,6 +28,7 @@ export default function Hero() {
 					height={350}
 					quality={100}
 					priority={true}
+					className={style.hero_image}
 				/>
 			</div>
 			<div>
