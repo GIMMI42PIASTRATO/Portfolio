@@ -16,8 +16,9 @@
 	font-size: 5rem;
 	font-weight: 700;
 	font-style: italic;
-	line-height: 1.2;
+	line-height: 1.3;
 	justify-content: center;
+	margin-bottom: 1.25rem;
 }
 
 .name {
@@ -27,4 +28,18 @@
 
 .surname {
 	text-align: end;
+}
+
+.description {
+	font-size: 1.125rem;
+	font-weight: 500;
+	line-height: 1.6;
+}
+
+.social {
+	cursor: pointer;
+	display: flex;
+	gap: 1.3rem;
+	font-size: 1.875rem;
+	margin-top: 2rem;
 }

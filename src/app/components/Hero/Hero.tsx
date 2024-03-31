@@ -1,6 +1,7 @@
 import Image from "next/image";
 import style from "./hero.module.css";
 import { TbBrandLinkedin, TbBrandGithub } from "react-icons/tb";
+import { mulish } from "@/utility/font";
 
 export default function Hero() {
 	return (
@@ -11,11 +12,11 @@ export default function Hero() {
 						<h1 className={style.name}>Vittorio</h1>
 						<h1 className={style.surname}>Bussano</h1>
 					</div>
-					<p>
+					<p className={`${style.description} ${mulish.className}`}>
 						Hi I&apos;m Vittorio Bussano. An aspiring full-stack web
 						developer and software engineer based in Turin, Italy.
 					</p>
-					<span>
+					<span className={style.social}>
 						<TbBrandGithub />
 						<TbBrandLinkedin />
 					</span>
