@@ -1,8 +1,10 @@
 .container {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	gap: 1rem;
 	margin-top: 7.5rem;
+	height: 37.5rem;
 }
 
 .hero_main {
@@ -48,4 +50,35 @@
 	border-radius: 50%;
 	height: 21.875rem;
 	width: 21.875rem;
+}
+
+@media (max-width: 900px) {
+	.container {
+		margin-top: 6.875rem;
+		height: auto;
+	}
+
+	.hero_main {
+		flex-direction: column-reverse;
+		align-items: center;
+		gap: 2.5rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.hero_name {
+		font-size: 3.5rem;
+	}
+
+	.hero_image {
+		height: 17.5rem;
+		width: 17.5rem;
+	}
+}
+
+@media (max-width: 360px) {
+	.hero_image {
+		height: 15rem;
+		width: 15rem;
+	}
 }
