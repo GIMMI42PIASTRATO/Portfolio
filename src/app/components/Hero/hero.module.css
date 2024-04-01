@@ -1,10 +1,10 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	gap: 1rem;
+	justify-content: center;
 	margin-top: 7.5rem;
 	height: 37.5rem;
+	position: relative;
 }
 
 .hero_main {
@@ -52,16 +52,27 @@
 	width: 21.875rem;
 }
 
+.skils_container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
 @media (max-width: 900px) {
 	.container {
 		margin-top: 6.875rem;
 		height: auto;
+		gap: 2.5rem;
 	}
 
 	.hero_main {
 		flex-direction: column-reverse;
 		align-items: center;
 		gap: 2.5rem;
+	}
+
+	.skils_container {
+		position: static;
 	}
 }
 

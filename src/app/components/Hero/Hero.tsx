@@ -38,7 +38,7 @@ export default function Hero() {
 					className={style.hero_image}
 				/>
 			</div>
-			<div>
+			<div className={style.skils_container}>
 				<h1>Carusel</h1>
 			</div>
 		</div>
