@@ -17,8 +17,15 @@ export default function Hero() {
 						developer and software engineer based in Turin, Italy.
 					</p>
 					<span className={style.social}>
-						<TbBrandGithub />
-						<TbBrandLinkedin />
+						<a
+							href="https://github.com/GIMMI42PIASTRATO"
+							target="_blank"
+						>
+							<TbBrandGithub />
+						</a>
+						<a href="#" target="_blank">
+							<TbBrandLinkedin />
+						</a>
 					</span>
 				</div>
 				<Image
