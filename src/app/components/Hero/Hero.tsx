@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Carousel from "../Carusel/Carusel";
 import style from "./hero.module.css";
 import { TbBrandLinkedin, TbBrandGithub } from "react-icons/tb";
 import { mulish } from "@/utility/font";
+import { items } from "@/utility/logo";
 
 export default function Hero() {
 	return (
@@ -39,7 +41,8 @@ export default function Hero() {
 				/>
 			</div>
 			<div className={style.skils_container}>
-				<h1>Carusel</h1>
+				<p>Skils</p>
+				<Carousel items={items} />
 			</div>
 		</div>
 	);
