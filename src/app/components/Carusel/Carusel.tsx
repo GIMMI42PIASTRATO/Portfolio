@@ -13,7 +13,8 @@ interface CarouselProps {
 const createImage = (items: Array<Item>) => {
 	return items.map((item, index) => (
 		<div key={index} className={style.item}>
-			<Image src={item.logos} alt={item.alt} fill={true} />
+			{/* <Image src={item.logos} alt={item.alt} fill={true} sizes="" /> */}
+			<img src={item.logos} alt={item.alt} />
 		</div>
 	));
 };
