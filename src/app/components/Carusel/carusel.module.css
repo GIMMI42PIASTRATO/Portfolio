@@ -1,10 +1,21 @@
+@keyframes slide {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translate(calc(-100% - 1.875rem));
+	}
+}
+
 .carusel_container {
 	display: flex;
 	gap: 1.875rem;
+	overflow: hidden;
 }
 
 .carusel {
 	display: flex;
+	animation: 35s slide infinite linear;
 	gap: 1.875rem;
 }
 
