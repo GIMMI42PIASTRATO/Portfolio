@@ -9,7 +9,7 @@ export const poppins = Poppins({
 
 export const mulish = Mulish({
 	subsets: ["latin"],
-	weight: ["300", "500", "700"],
+	weight: ["300", "500", "600", "700"],
 	style: ["normal"],
 	fallback: ["system-ui", "arial"],
 });

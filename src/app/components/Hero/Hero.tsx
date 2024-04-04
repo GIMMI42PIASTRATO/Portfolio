@@ -41,7 +41,7 @@ export default function Hero() {
 				/>
 			</div>
 			<div className={style.skils_container}>
-				<p>Skils</p>
+				<p className={mulish.className}>Skils</p>
 				<Carousel items={items} />
 			</div>
 		</div>

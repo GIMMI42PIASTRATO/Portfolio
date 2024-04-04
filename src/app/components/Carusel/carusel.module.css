@@ -1,0 +1,14 @@
+.carusel_container {
+	display: flex;
+	gap: 1.875rem;
+}
+
+.carusel {
+	display: flex;
+	gap: 1.875rem;
+}
+
+.skil_icon {
+	height: 3rem;
+	max-width: none;
+}

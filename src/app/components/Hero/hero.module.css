@@ -5,6 +5,7 @@
 	margin-top: 7.5rem;
 	height: 37.5rem;
 	position: relative;
+	overflow: hidden;
 }
 
 .hero_main {
@@ -53,9 +54,19 @@
 }
 
 .skils_container {
+	display: flex;
+	align-items: center;
 	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+
+.skils_container p {
+	font-size: 1.125rem;
+	font-weight: 600;
+	padding-right: 1.25rem;
+	border-right: 2px solid var(--text);
+	margin-right: 4.375rem;
 }
 
 @media (max-width: 900px) {
@@ -72,7 +83,17 @@
 	}
 
 	.skils_container {
+		flex-direction: column;
 		position: static;
+	}
+
+	.skils_container p {
+		margin-bottom: 1.875rem;
+		margin-right: 0;
+		padding-bottom: 0.625rem;
+		padding-right: 0;
+		border-bottom: 2px solid var(--text);
+		border-right: none;
 	}
 }
 
