@@ -8,9 +8,47 @@
 }
 
 .carusel_container {
+	position: relative;
 	display: flex;
 	gap: 1.875rem;
 	overflow: hidden;
+}
+
+/* .box {
+	position: absolute;
+	top: 0;
+	right: 0;
+	maxwidth
+} */
+
+.carusel_container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2rem;
+	height: 100%;
+	background: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 1),
+		rgba(0, 0, 0, 0)
+	);
+	z-index: 1;
+}
+
+.carusel_container::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2rem;
+	height: 100%;
+	background: linear-gradient(
+		to left,
+		rgba(0, 0, 0, 1),
+		rgba(0, 0, 0, 0)
+	);
+	z-index: 1;
 }
 
 .carusel {

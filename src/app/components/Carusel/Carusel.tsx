@@ -22,6 +22,7 @@ const createImage = (items: Array<Item>) => {
 function Carousel({ items }: CarouselProps) {
 	return (
 		<div className={style.carusel_container}>
+			<div className={style.box}></div>
 			<div className={style.carusel}>{createImage(items)}</div>
 			<div className={style.carusel}>{createImage(items)}</div>
 		</div>
