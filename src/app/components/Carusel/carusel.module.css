@@ -9,45 +9,38 @@
 
 .carusel_container {
 	position: relative;
-	display: flex;
-	gap: 1.875rem;
+	/* display: flex; */
+	/* gap: 1.875rem; */
 	overflow: hidden;
 }
 
-/* .box {
-	position: absolute;
-	top: 0;
-	right: 0;
-	maxwidth
-} */
+.box {
+	/* position: absolute; */
+	display: flex;
+	gap: 1.875rem;
+	/* Here the maximum width of the box containing the carusels is calculated by subtracting from the maximum width of the div within the root layout the right margin of the skils paragraph 3rem, its right border 2px, and its right padding 1.25rem. After that the content width of the skils paragraph is subtracted, which in this case is 38.906px. Finally the 5rem (2.5rem + 2.5rem) which are the left and right padding of the div within the root layout is subtracted, this is because the box-sizing is set to border-box */
+	max-width: calc(64rem - 3rem - 2px - 1.25rem - 38.906px - 5rem);
+}
 
-.carusel_container::before {
+.box::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 2rem;
+	width: 5rem;
 	height: 100%;
-	background: linear-gradient(
-		to right,
-		rgba(0, 0, 0, 1),
-		rgba(0, 0, 0, 0)
-	);
+	background: linear-gradient(to right, var(--background), #00000000);
 	z-index: 1;
 }
 
-.carusel_container::after {
+.box::after {
 	content: "";
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 2rem;
+	width: 5rem;
 	height: 100%;
-	background: linear-gradient(
-		to left,
-		rgba(0, 0, 0, 1),
-		rgba(0, 0, 0, 0)
-	);
+	background: linear-gradient(to left, var(--background), rgba(0, 0, 0, 0));
 	z-index: 1;
 }
 
