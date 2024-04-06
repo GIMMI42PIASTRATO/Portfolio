@@ -1,5 +1,4 @@
 import style from "./About.module.css";
-import Image from "next/image";
 
 export default function About() {
 	return (
@@ -15,7 +14,12 @@ export default function About() {
 						<img src="/keyboard-image.jpeg" alt="keyboard" />
 					</div>
 				</div>
-				<div className={style.details}></div>
+				<div className={style.details}>
+					<p>
+						Ciao sono una persona che sa scrivere a battitura per
+						fare delle cose
+					</p>
+				</div>
 			</div>
 		</div>
 	);
