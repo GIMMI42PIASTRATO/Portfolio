@@ -1,0 +1,12 @@
+/* section title start */
+
+.section_title {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid var(--secondary);
+	font-size: 1.063rem;
+	font-weight: 700;
+	padding-bottom: 5px;
+}
+
+/* section title end */

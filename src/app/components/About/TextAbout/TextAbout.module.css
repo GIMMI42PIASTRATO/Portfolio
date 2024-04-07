@@ -1,0 +1,21 @@
+/* Text start */
+
+.about_text {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.about_text h2 {
+	font-size: 1.563rem;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.about_text p {
+	font-size: 1.063rem;
+	line-height: 1.6;
+	font-weight: 500;
+}
+
+/* Text end */
