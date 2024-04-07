@@ -11,11 +11,26 @@ export default function About() {
 
 			<div className={style.text_container}>
 				<div className={style.about}>
-					<img
-						className={style.about_img}
-						src="/keyboard-image.jpeg"
-						alt="keyboard"
-					/>
+					<div className={style.img_container}>
+						{/* eslint-disable-next-line @next/next/no-img-element */}
+						<img
+							className={style.about_img}
+							src="/keyboard-image.jpeg"
+							alt="keyboard"
+						/>
+						<span className={style.circle}>
+							<img
+								className={style.wrapped_text}
+								src="/curved-text.png"
+								alt="Curved Text"
+							/>
+							<img
+								className={style.man_technologist}
+								src="/man-technologist-ios.png"
+								alt="Man Technologist Icon"
+							/>
+						</span>
+					</div>
 					<div className={style.about_text}>
 						<h2>
 							Embracing the digital frontier as a full-stack web
@@ -36,7 +51,7 @@ export default function About() {
 						</p>
 					</div>
 				</div>
-				<div className={style.details}></div>
+				<div className={style.details}>Ciao</div>
 			</div>
 		</>
 	);
