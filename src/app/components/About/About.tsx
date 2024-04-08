@@ -1,8 +1,8 @@
 import style from "./about.module.css";
-import { mulish } from "@/utility/font";
 import AboutImg from "./AboutImg/AboutImg";
 import TextAbout from "./TextAbout/TextAbout";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
+import Details from "./Details/Details";
 
 export default function About() {
 	return (
@@ -13,7 +13,15 @@ export default function About() {
 					<AboutImg />
 					<TextAbout />
 				</div>
-				<div className={style.details}>Ciao</div>
+				<div className={style.details}>
+					<Details
+						field="Experties"
+						value="Web Development, Python Development"
+					/>
+					<Details field="Born in" value="Turin, Italy" />
+					<Details field="Date of birth" value="September 13, 2006" />
+					<Details field="Education" value="Attending High School" />
+				</div>
 			</div>
 		</>
 	);

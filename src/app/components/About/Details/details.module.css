@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	font-size: 1.063rem;
+}
+
+.container h2 {
+	font-weight: 600;
+}
+
+.container p {
+	font-weight: 300;
+}
