@@ -13,5 +13,32 @@
 	display: grid;
 	grid-template-columns: auto auto auto auto;
 	gap: 7rem;
-	margin-top: 4.5rem;
+	margin-top: 4.3rem;
+}
+
+@media (max-width: 1023px) {
+	.about {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.details {
+		gap: 3rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.details {
+		grid-template-columns: auto auto;
+		grid-template-rows: 3rem 3rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.details {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
 }

@@ -49,3 +49,25 @@
 }
 
 /* Image end */
+
+@media (max-width: 1023px) {
+	.img_container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.circle {
+		right: 230px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.img_container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.circle {
+		right: 200px;
+	}
+}
