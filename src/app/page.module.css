@@ -1,0 +1,10 @@
+.hero_section {
+	height: 100vh;
+}
+
+@media (max-width: 900px) {
+	.hero_section {
+		height: auto;
+		margin-bottom: 10rem;
+	}
+}
