@@ -3,7 +3,7 @@ import Carousel from "../Carusel/Carusel";
 import style from "./hero.module.css";
 import { TbBrandLinkedin, TbBrandGithub } from "react-icons/tb";
 import { mulish } from "@/utility/font";
-import { items } from "@/utility/logo";
+import { items } from "@/data/logo";
 
 export default function Hero() {
 	return (
