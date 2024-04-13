@@ -6,6 +6,10 @@
 	margin-bottom: 5.625rem;
 }
 
+.project_section {
+	margin-bottom: 5.625rem;
+}
+
 @media (max-width: 900px) {
 	.hero_section {
 		height: auto;
