@@ -4,6 +4,7 @@ import { poppins } from "../utility/font";
 
 // Importing componets
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -19,9 +20,10 @@ export default function RootLayout({
 		<html lang="en" className={poppins.className}>
 			<body>
 				<Navbar />
-				<div className="max-w-5xl mx-auto px-5 sm:px-10">
+				<div className="max-w-5xl mx-auto px-5 xs:px-10">
 					{children}
 				</div>
+				<Footer />
 			</body>
 		</html>
 	);

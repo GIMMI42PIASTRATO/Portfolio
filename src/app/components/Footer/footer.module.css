@@ -1,0 +1,105 @@
+.footer_container {
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 5rem;
+	border-top: 1px solid var(--orizontal-line);
+}
+
+.box {
+	display: flex;
+	max-width: 64rem;
+	flex-direction: column;
+	padding: 3rem 0;
+	margin: 2rem auto 0 auto;
+	gap: 2rem;
+}
+
+.footer_cols {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.footer_col {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.logo img {
+	width: 1.875rem;
+	height: 1.875rem;
+	border-radius: 50%;
+}
+
+.buymeacoffee img {
+	width: 150px;
+}
+
+.links {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.links li {
+	padding: 0.5rem 1rem;
+}
+
+.links li a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.links li span {
+	color: var(--link);
+}
+
+.horizontal_line {
+	border: 1px solid var(--background3);
+}
+
+.credits_container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	font-weight: 300;
+}
+
+@media (max-width: 768px) {
+	.footer_cols {
+		flex-direction: column;
+		gap: 3rem;
+	}
+	.footer_col:last-child {
+		margin-bottom: 0;
+	}
+	.footer_container {
+		margin: 2rem 0;
+	}
+	.box {
+		padding: 2rem;
+	}
+	.links {
+		margin-bottom: 2rem;
+	}
+	.horizontal_line {
+		margin-bottom: 2rem;
+	}
+	.credits_container {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.footer_col {
+		font-size: 0.875rem;
+	}
+}

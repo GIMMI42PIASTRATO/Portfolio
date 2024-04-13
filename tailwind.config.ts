@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
 	content: [
@@ -15,7 +16,8 @@ const config: Config = {
 			},
 		},
 		screens: {
-			sm: "460px",
+			xs: "460px", // "xs" is a new breakpoint
+			...defaultTheme.screens,
 		},
 	},
 	plugins: [],
