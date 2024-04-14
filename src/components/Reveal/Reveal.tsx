@@ -32,7 +32,7 @@ export default function Reveal({
 				}}
 				initial="hidden"
 				animate={animationControls}
-				transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+				transition={{ duration: 0.8, ease: "easeOut" }}
 			>
 				{children}
 			</motion.div>

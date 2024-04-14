@@ -1,5 +1,5 @@
 import { mulish } from "@/utility/font";
-import style from "./textabout.module.css";
+import style from "./textAbout.module.css";
 
 export default function TextAbout() {
 	return (
