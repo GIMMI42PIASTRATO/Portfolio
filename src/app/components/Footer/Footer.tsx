@@ -15,10 +15,7 @@ export default function Footer() {
 					<div className={style.footer_cols}>
 						<div className={style.footer_col}>
 							<div className={style.logo}>
-								<img
-									src="mcpfp - GIMMI42PIASTRATO.png"
-									alt="Logo"
-								/>
+								<img src="GIMMI42PIASTRATO.png" alt="Logo" />
 								<p className="text-xl font-bold">
 									Vittorio Bussano
 								</p>
@@ -26,6 +23,7 @@ export default function Footer() {
 							<a
 								className={style.buymeacoffee}
 								href="https://www.buymeacoffee.com/GIMMI42PIASTRATO"
+								target="_blank"
 							>
 								<img
 									src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
@@ -85,14 +83,14 @@ export default function Footer() {
 							<p>Email</p>
 							<ul className={style.links}>
 								<li>
-									<a href="#">
+									<a href="mailto: vittoriobussano@gmail.com">
 										<TbMailbox
 											stroke="#51b1f5"
 											style={{
 												fontSize: "1.5rem",
 											}}
 										/>
-										<span>bussanovittorio@gmail.com</span>
+										<span>vittoriobussano@gmail.com</span>
 									</a>
 								</li>
 							</ul>
@@ -100,11 +98,11 @@ export default function Footer() {
 
 						<div className={style.footer_col}>
 							<h2 className="text-base font-bold">Sitemap</h2>
-							{["Home", "Blog", "Projects", "About"].map(
+							{["Home", "About", "Projects", "Contacts"].map(
 								(item, i) => (
 									<a
 										key={i}
-										href="#"
+										href={`#${item.toLowerCase()}`}
 										className="text-neutral-400 transition duration-200 hover:text-[--text]"
 									>
 										{item}

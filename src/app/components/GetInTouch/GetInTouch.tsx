@@ -14,7 +14,9 @@ export default function GetInTouch() {
 						<TbMail />
 					</span>
 					<h2 className={mulish.className}>
-						vittoriobussano@gmail.com
+						<a href="mailto: vittoriobussano@gmail.com">
+							vittoriobussano@gmail.com
+						</a>
 					</h2>
 				</div>
 			</div>

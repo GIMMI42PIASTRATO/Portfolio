@@ -7,16 +7,16 @@ import GetInTouch from "./components/GetInTouch/GetInTouch";
 export default function Home() {
 	return (
 		<main className="flex flex-col">
-			<section className={style.hero_section}>
+			<section className={style.hero_section} id="home">
 				<Hero />
 			</section>
-			<section className={style.about_section}>
+			<section className={style.about_section} id="about">
 				<About />
 			</section>
-			<section className={style.project_section}>
+			<section className={style.project_section} id="projects">
 				<Projects />
 			</section>
-			<section>
+			<section id="contacts">
 				<GetInTouch />
 			</section>
 		</main>

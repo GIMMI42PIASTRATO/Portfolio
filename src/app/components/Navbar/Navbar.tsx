@@ -19,13 +19,16 @@ export default function Navbar() {
 			<span className={style.link_container}>
 				<ul className={style.link}>
 					<li>
-						<a href="#">Home</a>
+						<a href="#home">Home</a>
 					</li>
 					<li>
-						<a href="#">Blog</a>
+						<a href="#about">About</a>
 					</li>
 					<li>
-						<a href="#">About</a>
+						<a href="#projects">Projects</a>
+					</li>
+					<li>
+						<a href="#contacts">Contacts</a>
 					</li>
 				</ul>
 				<ThemeButton />
