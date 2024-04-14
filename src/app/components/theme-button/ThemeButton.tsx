@@ -3,10 +3,22 @@
 import { useState } from "react";
 import { TbMoon, TbMenu, TbX } from "react-icons/tb";
 import { motion } from "framer-motion";
-import style from "./ThemeButton.module.css";
+import style from "./themebutton.module.css";
 
-export default function ThemeButton() {
+export default function ThemeButton({
+	isOpen,
+	setIsOpen,
+}: {
+	isOpen: boolean;
+	setIsOpen: (isOpen: boolean) => void;
+}) {
 	const [menu, setMenu] = useState(false);
+
+	const handleClick = () => {
+		setMenu(!menu);
+		setIsOpen(!isOpen);
+		console.log("click");
+	};
 
 	const menuButtonVariants = {
 		open: { rotate: 0 },
@@ -21,7 +33,7 @@ export default function ThemeButton() {
 
 			<motion.button
 				className={`${style.theme_button} ${style.menu}`}
-				onClick={() => setMenu(!menu)}
+				onClick={handleClick}
 				variants={menuButtonVariants}
 				initial={false}
 				animate={menu ? "open" : "closed"}

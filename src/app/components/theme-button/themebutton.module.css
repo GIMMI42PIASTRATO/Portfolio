@@ -1,6 +1,10 @@
 .button_container {
+	position: fixed;
 	display: flex;
 	align-items: center;
+	z-index: 250;
+	top: 1.4rem;
+	right: 2rem;
 }
 
 .theme_button {
