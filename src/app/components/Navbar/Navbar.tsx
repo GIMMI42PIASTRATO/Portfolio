@@ -5,10 +5,18 @@ import Image from "next/image";
 import ThemeButton from "../theme-button/ThemeButton";
 import BigScreenNav from "./BigScreenNav/BigScreenNav";
 import SmallScreenNav from "./SmallScreenNav/SmallScreenNav";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
+	const [linkClicked, setLinkClicked] = useState(false);
+
+	useEffect(() => {
+		if (linkClicked) {
+			setIsOpen(false);
+			setLinkClicked(false);
+		}
+	}, [linkClicked]);
 
 	return (
 		<>
@@ -29,7 +37,10 @@ export default function Navbar() {
 				</span>
 			</nav>
 			<ThemeButton isOpen={isOpen} setIsOpen={setIsOpen} />
-			<SmallScreenNav className={isOpen ? "flex" : "hidden"} />
+			<SmallScreenNav
+				className={isOpen ? "flex" : "hidden"}
+				onLinkClick={setLinkClicked}
+			/>
 		</>
 	);
 }

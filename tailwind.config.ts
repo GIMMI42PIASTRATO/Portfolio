@@ -16,6 +16,7 @@ const config: Config = {
 			},
 		},
 		screens: {
+			"2xs": "360px", // "2xs" is a new breakpoint
 			xs: "460px", // "xs" is a new breakpoint
 			...defaultTheme.screens,
 		},
