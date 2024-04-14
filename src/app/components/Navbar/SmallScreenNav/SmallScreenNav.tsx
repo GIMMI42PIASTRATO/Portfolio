@@ -1,37 +1,24 @@
 import style from "./smallscreennav.module.css";
+import { motion } from "framer-motion";
+import { menuSlide } from "../anim";
+import Links from "./Link/Link";
 
 export default function SmallScreenNav({
-	className,
 	onLinkClick,
 }: {
-	className: string;
 	onLinkClick: (linkClicked: boolean) => void;
 }) {
-	const links = [
-		{ name: "Home", href: "#home" },
-		{ name: "About", href: "#about" },
-		{ name: "Projects", href: "#projects" },
-		{ name: "Contacts", href: "#contacts" },
-	];
-
 	return (
-		<div className={`${style.fixed_nav} ${className}`}>
+		<motion.div
+			variants={menuSlide}
+			animate="enter"
+			exit="exit"
+			initial="initial"
+			className={style.fixed_nav}
+		>
 			<div className={style.nav_container}>
-				<h5 className="text-xs mb-9 text-neutral-400 uppercase">
-					Navigation
-				</h5>
-				<ul className="pt-9 border-t-[1px] border-neutral-400 flex flex-col">
-					{links.map((link, index) => (
-						<li
-							key={index}
-							onClick={() => onLinkClick(true)}
-							className="flex text-6xl leading-relaxed max-xs:text-5xl max-xs:leading-relaxed max-2xs:text-4xl"
-						>
-							<a href={link.href}>{link.name}</a>
-						</li>
-					))}
-				</ul>
+				<Links onLinkClick={onLinkClick} />
 			</div>
-		</div>
+		</motion.div>
 	);
 }

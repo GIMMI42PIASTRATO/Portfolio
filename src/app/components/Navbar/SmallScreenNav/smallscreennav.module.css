@@ -1,4 +1,5 @@
 .fixed_nav {
+    display: flex;
 	position: fixed;
 	z-index: 200;
 	flex-direction: column;

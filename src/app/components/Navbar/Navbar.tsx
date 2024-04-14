@@ -6,6 +6,7 @@ import ThemeButton from "../theme-button/ThemeButton";
 import BigScreenNav from "./BigScreenNav/BigScreenNav";
 import SmallScreenNav from "./SmallScreenNav/SmallScreenNav";
 import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -37,10 +38,9 @@ export default function Navbar() {
 				</span>
 			</nav>
 			<ThemeButton isOpen={isOpen} setIsOpen={setIsOpen} />
-			<SmallScreenNav
-				className={isOpen ? "flex" : "hidden"}
-				onLinkClick={setLinkClicked}
-			/>
+			<AnimatePresence>
+				{isOpen && <SmallScreenNav onLinkClick={setLinkClicked} />}
+			</AnimatePresence>
 		</>
 	);
 }
