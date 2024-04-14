@@ -3,6 +3,7 @@ import AboutImg from "./AboutImg/AboutImg";
 import TextAbout from "./TextAbout/TextAbout";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Details from "./Details/Details";
+import Reveal from "@/components/Reveal/Reveal";
 
 export default function About() {
 	return (
@@ -11,17 +12,27 @@ export default function About() {
 			<div className={style.about_container}>
 				<div className={style.about}>
 					<AboutImg />
-					<TextAbout />
+					<Reveal>
+						<TextAbout />
+					</Reveal>
 				</div>
-				<div className={style.details}>
-					<Details
-						field="Experties"
-						value="Web Development, Python Development"
-					/>
-					<Details field="Born in" value="Turin, Italy" />
-					<Details field="Date of birth" value="September 13, 2006" />
-					<Details field="Education" value="Attending High School" />
-				</div>
+				<Reveal>
+					<div className={style.details}>
+						<Details
+							field="Experties"
+							value="Web Development, Python Development"
+						/>
+						<Details field="Born in" value="Turin, Italy" />
+						<Details
+							field="Date of birth"
+							value="September 13, 2006"
+						/>
+						<Details
+							field="Education"
+							value="Attending High School"
+						/>
+					</div>
+				</Reveal>
 			</div>
 		</>
 	);
