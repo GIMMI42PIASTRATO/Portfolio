@@ -1,11 +1,11 @@
 import BentoImg from "@/app/components/BentoGrid/BentoImg/BentoImg";
 import {
-	IconArrowWaveRightUp,
+	IconLock,
 	IconBoxAlignRightFilled,
 	IconBoxAlignTopLeft,
 	IconHexagonNumber6,
-	IconFileBroken,
-	IconSignature,
+	IconDeviceLaptop,
+	IconDeviceMobile,
 	IconTableColumn,
 } from "@tabler/icons-react";
 import { link } from "fs";
@@ -20,46 +20,32 @@ export const items = [
 		link: "https://the-next-generation-mnist-challenge.vercel.app/",
 	},
 	{
-		title: "The Digital Revolution",
-		description: "Dive into the transformative power of technology.",
-		header: <BentoImg img="keyboard-image.jpeg" />,
-		icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+		title: "Desktop App Development in Python",
+		description: "All my Python app projects in one place.",
+		header: <BentoImg img="python_ctkinter.png" />,
+		icon: <IconDeviceLaptop className="h-4 w-4 text-neutral-500" />,
+		link: "https://github.com/GIMMI42PIASTRATO/learning-tkinter",
+	},
+	{
+		title: "Mobile App Development in Kotlin",
+		description: "Explore the world of mobile app development with Kotlin.",
+		header: <BentoImg img="kotlin_android.png" />,
+		icon: <IconDeviceMobile className="h-4 w-4 text-neutral-500" />,
 		link: "#",
 	},
 	{
-		title: "The Art of Design",
-		description: "Discover the beauty of thoughtful and functional design.",
-		header: <BentoImg img="keyboard-image.jpeg" />,
-		icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-		link: "#",
-	},
-	{
-		title: "The Power of Communication",
-		description:
-			"Understand the impact of effective communication in our lives.",
-		header: <BentoImg img="keyboard-image.jpeg" />,
+		title: "Emulshroom™",
+		description: "E-commerce platform for ECO mushrooms emulsifiers.",
+		header: <BentoImg img="Emulshroom.png" />,
 		icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-		link: "#",
+		link: "https://emulshroom.vercel.app/",
 	},
 	{
-		title: "The Pursuit of Knowledge",
-		description: "Join the quest for understanding and enlightenment.",
-		header: <BentoImg img="keyboard-image.jpeg" />,
-		icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-		link: "#",
-	},
-	{
-		title: "The Joy of Creation",
-		description: "Experience the thrill of bringing ideas to life.",
-		header: <BentoImg img="keyboard-image.jpeg" />,
-		icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-		link: "#",
-	},
-	{
-		title: "The Spirit of Adventure",
-		description: "Embark on exciting journeys and thrilling discoveries.",
-		header: <BentoImg img="keyboard-image.jpeg" />,
-		icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+		title: "Text Valt",
+		description:
+			"Secure your text messages with this powerful encryption tool.",
+		header: <BentoImg img="textvault.png" />,
+		icon: <IconLock className="h-4 w-4 text-neutral-500" />,
 		link: "#",
 	},
 ];
