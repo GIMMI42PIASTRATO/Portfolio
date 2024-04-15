@@ -1,20 +1,38 @@
 .link {
 	display: flex;
 	list-style: none;
-	gap: 1rem;
-	margin-right: 4.5rem;
+	gap: 3rem;
+	margin-right: 5rem;
 }
 
 .link li {
+	display: inline-block;
+	position: relative;
 	font-weight: 500;
 	font-size: 1rem;
-	padding: 0.5rem 1rem;
-	border-radius: 0.75rem;
-	transition: background-color 0.2s ease-in-out;
+	padding: 0.2rem 0;
+	/* padding: 0.5rem 1rem; */
+	/* border-radius: 0.75rem; */
+	/* transition:  .2s ease-in-out; */
 }
 
-.link li:hover {
-	background-color: var(--secondary2);
+.link li::after {
+	content: '';
+  	position: absolute;
+  	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--text);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.link li:hover::after {
+	/* background-color: var(--secondary2); */
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 @media (max-width: 900px) {

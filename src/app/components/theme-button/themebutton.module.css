@@ -52,3 +52,11 @@
 		justify-content: center;
 	}
 }
+
+
+@media (max-width: 500px) {
+	.button_container {
+		top: .93rem;
+		right: 1rem;
+	}
+}
