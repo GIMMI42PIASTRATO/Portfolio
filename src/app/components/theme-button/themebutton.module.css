@@ -56,7 +56,7 @@
 
 @media (max-width: 500px) {
 	.button_container {
-		top: .93rem;
-		right: 1rem;
+		top: 1.25rem;
+		right: 2rem;
 	}
 }

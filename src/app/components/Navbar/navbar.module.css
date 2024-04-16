@@ -1,5 +1,4 @@
 .nav_container {
-	position: fixed;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -40,6 +39,10 @@
 }
 
 @media (max-width: 500px) {
+	.nav_container {
+		padding: 1.75rem 2rem;
+	}
+
 	.img_container {
 		display: none;
 	}
