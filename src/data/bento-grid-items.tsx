@@ -41,11 +41,11 @@ export const items = [
 		link: "https://emulshroom.vercel.app/",
 	},
 	{
-		title: "Text Valt",
+		title: "Text Vault",
 		description:
 			"Secure your text messages with this powerful encryption tool.",
 		header: <BentoImg img="textvault.png" />,
 		icon: <IconLock className="h-4 w-4 text-neutral-500" />,
-		link: "#",
+		link: "https://github.com/GIMMI42PIASTRATO/TextVault",
 	},
 ];

@@ -46,7 +46,10 @@ export default function Footer() {
 
 							<ul className={style.links}>
 								<li>
-									<a href="https://github.com/GIMMI42PIASTRATO">
+									<a
+										href="https://github.com/GIMMI42PIASTRATO"
+										target="_blank"
+									>
 										<TbBrandGithub
 											stroke="#51b1f5"
 											style={{
@@ -57,7 +60,7 @@ export default function Footer() {
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="#" target="_blank">
 										<TbBrandLinkedin
 											stroke="#51b1f5"
 											style={{
@@ -68,7 +71,10 @@ export default function Footer() {
 									</a>
 								</li>
 								<li>
-									<a href="https://stackoverflow.com/users/19192281/gimmi42piastrato">
+									<a
+										href="https://stackoverflow.com/users/19192281/gimmi42piastrato"
+										target="_blank"
+									>
 										<TbBrandStackoverflow
 											stroke="#51b1f5"
 											style={{
@@ -118,7 +124,7 @@ export default function Footer() {
 							An indi web ring {"<"}- 🕸️ -{">"}
 						</p>
 						<small>
-							Copyright © 2023 All Rights Reserved. CC BY-NC-ND
+							Copyright © 2024 All Rights Reserved. CC BY-NC-ND
 							License.
 						</small>
 					</div>
