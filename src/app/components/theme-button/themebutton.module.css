@@ -21,12 +21,12 @@
 	background-color: #000;
 	cursor: pointer;
 	outline: none;
-	transition: background-color 0.2s ease-in-out;
+	/* transition: background-color 0.2s ease-in-out; */
 }
 
-.theme_button:hover {
+/* .theme_button:hover {
 	background-color: var(--secondary);
-}
+} */
 
 .theme_button svg {
 	display: flex;

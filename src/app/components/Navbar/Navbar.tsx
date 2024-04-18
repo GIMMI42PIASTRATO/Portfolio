@@ -5,10 +5,14 @@ import Image from "next/image";
 import ThemeButton from "../theme-button/ThemeButton";
 import BigScreenNav from "./BigScreenNav/BigScreenNav";
 import SmallScreenNav from "./SmallScreenNav/SmallScreenNav";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
+import useIsInViewport from "@/hooks/useIsInViewport";
 
 export default function Navbar() {
+	const ref = useRef<HTMLDivElement>(null);
+	const isInViewport = useIsInViewport(ref, "200px");
+
 	const [isOpen, setIsOpen] = useState(false);
 	const [linkClicked, setLinkClicked] = useState(false);
 
@@ -21,7 +25,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<nav className={style.nav_container}>
+			<nav ref={ref} className={style.nav_container}>
 				<div className={style.name_container}>
 					<div className={style.img_container}>
 						<Image
@@ -37,7 +41,11 @@ export default function Navbar() {
 					<BigScreenNav />
 				</span>
 			</nav>
-			<ThemeButton isOpen={isOpen} setIsOpen={setIsOpen} />
+			<ThemeButton
+				isOpen={isOpen}
+				setIsOpen={setIsOpen}
+				isInViewport={!isInViewport}
+			/>
 			<AnimatePresence>
 				{isOpen && <SmallScreenNav onLinkClick={setLinkClicked} />}
 			</AnimatePresence>
