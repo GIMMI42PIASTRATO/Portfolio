@@ -5,6 +5,7 @@ import { TbMoon, TbMenu, TbX } from "react-icons/tb";
 import { motion, cubicBezier } from "framer-motion";
 import style from "./themebutton.module.css";
 import { MutableRefObject } from "react";
+import { exit } from "process";
 
 export default function ThemeButton({
 	isOpen,
@@ -28,15 +29,24 @@ export default function ThemeButton({
 		<motion.div
 			className={style.button_container}
 			initial="hidden"
-			animate={isInViewport ? "visible" : "hidden"}
+			animate={isInViewport ? "visible" : "exit"}
+			exit="exit"
 			variants={{
-				hidden: { opacity: 0, scale: 0.3 },
-				visible: { opacity: 1, scale: 1 },
-			}}
-			transition={{
-				duration: 0.4,
-				ease: [0.34, 1.56, 0.64, 1],
-				delay: 0.1,
+				// hidden: {
+				// 	opacity: 0,
+				// 	scale: 0,
+				// 	transition: { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] },
+				// },
+				visible: {
+					opacity: 1,
+					scale: 1,
+					transition: { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] },
+				},
+				exit: {
+					opacity: 0,
+					scale: 0,
+					transition: { duration: 0.7, ease: [0.34, 1.56, 0.64, 1] },
+				},
 			}}
 		>
 			<motion.button

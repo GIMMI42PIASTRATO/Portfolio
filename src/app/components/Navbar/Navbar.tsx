@@ -41,11 +41,13 @@ export default function Navbar() {
 					<BigScreenNav />
 				</span>
 			</nav>
-			<ThemeButton
-				isOpen={isOpen}
-				setIsOpen={setIsOpen}
-				isInViewport={!isInViewport}
-			/>
+			<AnimatePresence>
+				<ThemeButton
+					isOpen={isOpen}
+					setIsOpen={setIsOpen}
+					isInViewport={!isInViewport}
+				/>
+			</AnimatePresence>
 			<AnimatePresence>
 				{isOpen && <SmallScreenNav onLinkClick={setLinkClicked} />}
 			</AnimatePresence>
