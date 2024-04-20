@@ -1,11 +1,7 @@
-"use client";
-
 // import { useState } from "react";
-import { TbMoon, TbMenu, TbX } from "react-icons/tb";
-import { motion, cubicBezier } from "framer-motion";
+import { TbMenu, TbX } from "react-icons/tb";
+import { motion } from "framer-motion";
 import style from "./themebutton.module.css";
-import { MutableRefObject } from "react";
-import { exit } from "process";
 
 export default function ThemeButton({
 	isOpen,
