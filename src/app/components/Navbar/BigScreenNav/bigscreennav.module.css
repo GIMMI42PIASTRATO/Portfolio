@@ -4,6 +4,10 @@
 	gap: 3rem;
 }
 
+.menu {
+	display: none;
+}
+
 .link li {
 	display: inline-block;
 	position: relative;
@@ -37,5 +41,22 @@
 @media (max-width: 900px) {
 	.link {
 		display: none;
+	}
+
+	.menu {
+		position: relative;
+		display: flex;
+	}
+
+	.menu::before {
+		content: '';
+		position: absolute;
+		width: calc(clamp(16px, 1.2vw, 19px) / 2.75);
+		height: calc(clamp(16px, 1.2vw, 19px) / 2.75);
+		background-color: var(--text);
+		border-radius: 50%;
+		top: 50%;
+		left: -1rem;
+		transform: translateY(-50%);
 	}
 }

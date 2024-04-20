@@ -38,7 +38,7 @@ export default function Navbar() {
 					<a href="#home">Vittorio Bussano</a>
 				</div>
 				<span className={style.link_container}>
-					<BigScreenNav />
+					<BigScreenNav isOpen={isOpen} setIsOpen={setIsOpen} />
 				</span>
 			</nav>
 			<AnimatePresence>
@@ -48,6 +48,7 @@ export default function Navbar() {
 					isInViewport={!isInViewport}
 				/>
 			</AnimatePresence>
+
 			<AnimatePresence>
 				{isOpen && <SmallScreenNav onLinkClick={setLinkClicked} />}
 			</AnimatePresence>

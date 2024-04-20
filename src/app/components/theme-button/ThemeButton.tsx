@@ -21,6 +21,8 @@ export default function ThemeButton({
 		closed: { rotate: 180 },
 	};
 
+	//TODO: Create a component for the button so you can render it if the navbar is open
+
 	return (
 		<motion.div
 			className={style.button_container}
