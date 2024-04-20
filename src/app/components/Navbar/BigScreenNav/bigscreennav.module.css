@@ -2,7 +2,6 @@
 	display: flex;
 	list-style: none;
 	gap: 3rem;
-	margin-right: 5rem;
 }
 
 .link li {

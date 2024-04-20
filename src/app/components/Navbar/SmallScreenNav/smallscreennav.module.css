@@ -16,3 +16,12 @@
 	display: flex;
 	flex-direction: column;
 }
+
+@media (min-width: 901px) {
+	.fixed_nav {
+		width: auto;
+		height: 100%;
+		padding: 15vh 7.5vw 10vh 7.5vw;
+		right: 0;
+	}
+}
