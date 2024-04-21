@@ -12,6 +12,16 @@
 	/* margin: 24px auto; */
 }
 
+.no_scrollable_overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 150;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
 .name_container {
 	display: flex;
 	align-items: center;

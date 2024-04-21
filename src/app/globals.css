@@ -28,6 +28,7 @@
 	margin: 0;
 	padding: 0;
 	color: var(--text);
+	scrollbar-width: none;
 }
 
 body {

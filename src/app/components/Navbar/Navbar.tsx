@@ -5,9 +5,10 @@ import Image from "next/image";
 import ThemeButton from "../theme-button/ThemeButton";
 import BigScreenNav from "./BigScreenNav/BigScreenNav";
 import SmallScreenNav from "./SmallScreenNav/SmallScreenNav";
-import { useState, useEffect, useRef } from "react";
-import { AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef, use } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import useIsInViewport from "@/hooks/useIsInViewport";
+import { fadeIn } from "./anim";
 
 export default function Navbar() {
 	const ref = useRef<HTMLDivElement>(null);
@@ -21,10 +22,28 @@ export default function Navbar() {
 			setIsOpen(false);
 			setLinkClicked(false);
 		}
-	}, [linkClicked]);
+
+		if (isOpen) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+	}, [linkClicked, isOpen]);
 
 	return (
 		<>
+			<AnimatePresence>
+				{isOpen && (
+					<motion.div
+						className={style.no_scrollable_overlay}
+						onClick={() => setIsOpen(false)}
+						variants={fadeIn}
+						animate="enter"
+						exit="exit"
+						initial="initial"
+					/>
+				)}
+			</AnimatePresence>
 			<nav ref={ref} className={style.nav_container}>
 				<div className={style.name_container}>
 					<div className={style.img_container}>
