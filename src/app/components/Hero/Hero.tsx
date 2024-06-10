@@ -37,7 +37,7 @@ export default function Hero() {
 					</div>
 				</Reveal>
 				<Image
-					src="/GIMMI42PIASTRATO.png"
+					src="/GIMMI42PIASTRATO-PRIDE.png"
 					alt="Logo"
 					width={350}
 					height={350}

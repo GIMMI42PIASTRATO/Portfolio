@@ -48,7 +48,7 @@ export default function Navbar() {
 				<div className={style.name_container}>
 					<div className={style.img_container}>
 						<Image
-							src="/GIMMI42PIASTRATO.png"
+							src="/GIMMI42PIASTRATO-PRIDE.png"
 							alt="Logo"
 							width={40}
 							height={40}
