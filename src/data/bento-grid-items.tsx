@@ -1,16 +1,22 @@
 import BentoImg from "@/app/components/BentoGrid/BentoImg/BentoImg";
 import {
 	IconLock,
-	IconBoxAlignRightFilled,
-	IconBoxAlignTopLeft,
 	IconHexagonNumber6,
 	IconDeviceLaptop,
 	IconDeviceMobile,
 	IconTableColumn,
+	IconQuote,
 } from "@tabler/icons-react";
-import { link } from "fs";
 
-export const items = [
+type Item = {
+	title: string;
+	description: string;
+	header: JSX.Element | JSX.Element[];
+	icon: JSX.Element;
+	link: string;
+};
+
+export const items: Item[] = [
 	{
 		title: "*NIST User Interface",
 		description:
@@ -39,6 +45,17 @@ export const items = [
 		header: <BentoImg img="Emulshroom.png" />,
 		icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
 		link: "https://emulshroom.vercel.app/",
+	},
+	{
+		title: "quotify.io",
+		description:
+			"UNDER DEVELOPMENT: quotify.io is a modern SaaS platform that allows you to create beautiful quotes with various styles, download them for free, and even purchase a printed version to be delivered right to your doorstep",
+		header: [
+			<BentoImg img="quotify.png" key={1} />,
+			<BentoImg img="quotify-phone.png" key={2} />,
+		],
+		icon: <IconQuote className="h-4 w-4 text-neutral-500" />,
+		link: "https://github.com/GIMMI42PIASTRATO/quotify.io",
 	},
 	{
 		title: "Text Vault",
