@@ -5,6 +5,7 @@ import { poppins } from "../utility/font";
 // Importing componets
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import PointerFollower from "./components/pointer-follower";
 
 export const metadata: Metadata = {
 	title: "Vittorio Bussano • Full Stack Web Developer",
@@ -20,6 +21,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={poppins.className}>
 			<body>
+				<PointerFollower />
 				<Navbar />
 				<div className="max-w-5xl mx-auto px-5 xs:px-10">
 					{children}
