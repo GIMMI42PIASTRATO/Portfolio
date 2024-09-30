@@ -11,14 +11,14 @@ export default function PointerFollower() {
 	const [position, setPosition] = useState({ x: -100, y: -100 });
 	const [isMouseDevice, setIsMouseDevice] = useState(true);
 	const [isCursorOnHero, setIsCursorOnHero] = useState(false);
-	const heroRef = useRef<Element | null>(null);
+	const heroNameRef = useRef<Element | null>(null);
 
 	useEffect(() => {
 		// Check if the user is on a touch device
 		const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 		setIsMouseDevice(!isTouchDevice);
 
-		heroRef.current = document.querySelector(`.${style.hero_name}`);
+		heroNameRef.current = document.querySelector(`.${style.hero_name}`);
 
 		if (!isTouchDevice) {
 			const updpatePosition = throttle((e: MouseEvent) => {
@@ -30,12 +30,12 @@ export default function PointerFollower() {
 
 			window.addEventListener("mousemove", updpatePosition);
 
-			if (heroRef.current) {
-				heroRef.current.addEventListener(
+			if (heroNameRef.current) {
+				heroNameRef.current.addEventListener(
 					"mouseenter",
 					handleMouseEnter
 				);
-				heroRef.current.addEventListener(
+				heroNameRef.current.addEventListener(
 					"mouseleave",
 					handleMouseLeave
 				);
@@ -43,12 +43,12 @@ export default function PointerFollower() {
 
 			return () => {
 				window.removeEventListener("mousemove", updpatePosition);
-				if (heroRef.current) {
-					heroRef.current.removeEventListener(
+				if (heroNameRef.current) {
+					heroNameRef.current.removeEventListener(
 						"mouseenter",
 						handleMouseEnter
 					);
-					heroRef.current.removeEventListener(
+					heroNameRef.current.removeEventListener(
 						"mouseleave",
 						handleMouseLeave
 					);
@@ -65,8 +65,10 @@ export default function PointerFollower() {
 		<div className="fixed inset-0 pointer-events-none z-50">
 			<div
 				className={cn(
-					"relative w-[91px] h-[91px] bg-transparent backdrop-blur-sm rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-[600ms] ease-out overflow-hidden",
-					isCursorOnHero ? "w-[177px] h-[177px]" : "w-[91px] h-[91px]"
+					"relative w-[91px] h-[91px] bg-transparent backdrop-blur-sm rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-[left,top,width,height,filter] duration-[600ms] ease-out overflow-hidden",
+					isCursorOnHero
+						? "w-[177px] h-[177px] invert backdrop-blur-0 "
+						: "w-[91px] h-[91px]"
 				)}
 				style={{
 					left: `${position.x}px`,
