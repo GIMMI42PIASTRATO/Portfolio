@@ -11,6 +11,9 @@ export const metadata: Metadata = {
 	title: "Vittorio Bussano • Full Stack Web Developer",
 	description:
 		"Vittorio Bussano is a Full Stack Web Developer based in Italy.",
+	verification: {
+		google: "0jYFYURNbHa2Xo9fbkJ8N_0Na_eGjKJwQtMvTKlMU1Q",
+	},
 };
 
 export default function RootLayout({
