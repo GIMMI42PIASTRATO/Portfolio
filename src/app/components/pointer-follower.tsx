@@ -13,6 +13,7 @@ export default function PointerFollower() {
 	const [isCursorOnHero, setIsCursorOnHero] = useState(false);
 	const [isCursorOnText, setIsCursorOnText] = useState(false);
 	const textCursorOffset = { x: 32, y: 44 };
+	const textHoverPadding = 28;
 	const heroNameRef = useRef<Element | null>(null);
 	const textRef = useRef<NodeListOf<Element> | null>(null);
 
@@ -29,15 +30,25 @@ export default function PointerFollower() {
 		if (!isTouchDevice) {
 			const updpatePosition = throttle((e: MouseEvent) => {
 				setPosition({ x: e.clientX, y: e.clientY });
+				const cursorIsOnText = Array.from(textRef.current ?? []).some(
+					(textEl) => {
+						const rect = textEl.getBoundingClientRect();
+
+						return (
+							e.clientX >= rect.left - textHoverPadding &&
+							e.clientX <= rect.right + textHoverPadding &&
+							e.clientY >= rect.top - textHoverPadding &&
+							e.clientY <= rect.bottom + textHoverPadding
+						);
+					},
+				);
+
+				setIsCursorOnText(cursorIsOnText);
 			}, 20);
 
 			// handler to change pointer follower style on hero
 			const handleMouseEnterOnHero = () => setIsCursorOnHero(true);
 			const handleMouseLeaveOnHero = () => setIsCursorOnHero(false);
-
-			// handler to change pointer follower style on text
-			const handleMouseEnterOnText = () => setIsCursorOnText(true);
-			const handleMouseLeaveOnText = () => setIsCursorOnText(false);
 
 			window.addEventListener("mousemove", updpatePosition);
 
@@ -52,20 +63,6 @@ export default function PointerFollower() {
 				);
 			}
 
-			if (textRef.current) {
-				textRef.current.forEach((textEl) => {
-					textEl.addEventListener(
-						"mouseenter",
-						handleMouseEnterOnText,
-					);
-
-					textEl.addEventListener(
-						"mouseleave",
-						handleMouseLeaveOnText,
-					);
-				});
-			}
-
 			return () => {
 				window.removeEventListener("mousemove", updpatePosition);
 				updpatePosition.cancel();
@@ -78,20 +75,6 @@ export default function PointerFollower() {
 						"mouseleave",
 						handleMouseLeaveOnHero,
 					);
-				}
-
-				if (textRef.current) {
-					textRef.current.forEach((textEl) => {
-						textEl.removeEventListener(
-							"mouseenter",
-							handleMouseEnterOnText,
-						);
-
-						textEl.removeEventListener(
-							"mouseleave",
-							handleMouseLeaveOnText,
-						);
-					});
 				}
 			};
 		}
