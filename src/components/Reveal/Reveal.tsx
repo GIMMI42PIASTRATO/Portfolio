@@ -24,7 +24,13 @@ export default function Reveal({
 	}, [isInView, animationControls]);
 
 	return (
-		<div ref={ref} className={cn("relative overflow-hidden", className)}>
+		<div
+			ref={ref}
+			className={cn(
+				"relative overflow-hidden text-smol-cursor",
+				className,
+			)}
+		>
 			<motion.div
 				variants={{
 					hidden: { opacity: 0, y: 75 },

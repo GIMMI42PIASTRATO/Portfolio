@@ -11,7 +11,10 @@ export default function PointerFollower() {
 	const [position, setPosition] = useState({ x: -100, y: -100 });
 	const [isMouseDevice, setIsMouseDevice] = useState(true);
 	const [isCursorOnHero, setIsCursorOnHero] = useState(false);
+	const [isCursorOnText, setIsCursorOnText] = useState(false);
+	const textCursorOffset = { x: 32, y: 44 };
 	const heroNameRef = useRef<Element | null>(null);
+	const textRef = useRef<NodeListOf<Element> | null>(null);
 
 	useEffect(() => {
 		// Check if the user is on a touch device
@@ -19,39 +22,76 @@ export default function PointerFollower() {
 		setIsMouseDevice(!isTouchDevice);
 
 		heroNameRef.current = document.querySelector(`.${style.hero_name}`);
+		textRef.current = document.querySelectorAll(
+			`.text-smol-cursor:not(${style.hero_name})`,
+		);
 
 		if (!isTouchDevice) {
 			const updpatePosition = throttle((e: MouseEvent) => {
 				setPosition({ x: e.clientX, y: e.clientY });
 			}, 20);
 
-			const handleMouseEnter = () => setIsCursorOnHero(true);
-			const handleMouseLeave = () => setIsCursorOnHero(false);
+			// handler to change pointer follower style on hero
+			const handleMouseEnterOnHero = () => setIsCursorOnHero(true);
+			const handleMouseLeaveOnHero = () => setIsCursorOnHero(false);
+
+			// handler to change pointer follower style on text
+			const handleMouseEnterOnText = () => setIsCursorOnText(true);
+			const handleMouseLeaveOnText = () => setIsCursorOnText(false);
 
 			window.addEventListener("mousemove", updpatePosition);
 
 			if (heroNameRef.current) {
 				heroNameRef.current.addEventListener(
 					"mouseenter",
-					handleMouseEnter
+					handleMouseEnterOnHero,
 				);
 				heroNameRef.current.addEventListener(
 					"mouseleave",
-					handleMouseLeave
+					handleMouseLeaveOnHero,
 				);
+			}
+
+			if (textRef.current) {
+				textRef.current.forEach((textEl) => {
+					textEl.addEventListener(
+						"mouseenter",
+						handleMouseEnterOnText,
+					);
+
+					textEl.addEventListener(
+						"mouseleave",
+						handleMouseLeaveOnText,
+					);
+				});
 			}
 
 			return () => {
 				window.removeEventListener("mousemove", updpatePosition);
+				updpatePosition.cancel();
 				if (heroNameRef.current) {
 					heroNameRef.current.removeEventListener(
 						"mouseenter",
-						handleMouseEnter
+						handleMouseEnterOnHero,
 					);
 					heroNameRef.current.removeEventListener(
 						"mouseleave",
-						handleMouseLeave
+						handleMouseLeaveOnHero,
 					);
+				}
+
+				if (textRef.current) {
+					textRef.current.forEach((textEl) => {
+						textEl.removeEventListener(
+							"mouseenter",
+							handleMouseEnterOnText,
+						);
+
+						textEl.removeEventListener(
+							"mouseleave",
+							handleMouseLeaveOnText,
+						);
+					});
 				}
 			};
 		}
@@ -61,27 +101,36 @@ export default function PointerFollower() {
 		return null;
 	}
 
+	const followerPosition = isCursorOnText
+		? {
+				left: `${position.x + textCursorOffset.x}px`,
+				top: `${position.y + textCursorOffset.y}px`,
+			}
+		: {
+				left: `${position.x}px`,
+				top: `${position.y}px`,
+			};
+
 	return (
 		<div className="fixed inset-0 pointer-events-none z-50">
 			<div
 				className={cn(
-					"relative w-[91px] h-[91px] bg-transparent backdrop-blur-sm rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-[left,top,width,height,filter] duration-[600ms] ease-out overflow-hidden",
+					"relative w-[91px] h-[91px] rounded-full border border-transparent bg-transparent shadow-none backdrop-blur-sm transform -translate-x-1/2 -translate-y-1/2 transition-[left,top,width,height,filter,background-color,border-color,box-shadow] duration-[600ms] ease-out overflow-hidden",
 					isCursorOnHero
 						? "w-[177px] h-[177px] invert backdrop-blur-none"
-						: "w-[91px] h-[91px]"
+						: isCursorOnText
+							? "w-[24px] h-[24px] border-white/25 bg-[rgba(174,194,207,0.14)] shadow-[0_10px_30px_rgba(6,7,9,0.18)] backdrop-blur-xl"
+							: "w-[91px] h-[91px]",
 				)}
-				style={{
-					left: `${position.x}px`,
-					top: `${position.y}px`,
-				}}
+				style={followerPosition}
 				aria-hidden="true"
 			>
 				<div
 					className={cn(
 						"flex justify-center items-center w-full h-full transition-all duration-[600ms] ease-out",
-						isCursorOnHero
+						isCursorOnHero || isCursorOnText
 							? "opacity-0 scale-50"
-							: "opacity-100 scale-100"
+							: "opacity-100 scale-100",
 					)}
 				>
 					<Image
