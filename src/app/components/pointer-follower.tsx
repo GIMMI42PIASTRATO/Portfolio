@@ -67,7 +67,7 @@ export default function PointerFollower() {
 				className={cn(
 					"relative w-[91px] h-[91px] bg-transparent backdrop-blur-sm rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-[left,top,width,height,filter] duration-[600ms] ease-out overflow-hidden",
 					isCursorOnHero
-						? "w-[177px] h-[177px] invert backdrop-blur-0 "
+						? "w-[177px] h-[177px] invert backdrop-blur-none"
 						: "w-[91px] h-[91px]"
 				)}
 				style={{
