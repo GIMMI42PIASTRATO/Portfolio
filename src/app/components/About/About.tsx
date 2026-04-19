@@ -27,10 +27,7 @@ export default function About() {
 							field="Date of birth"
 							value="September 13, 2006"
 						/>
-						<Details
-							field="Education"
-							value="Attending High School"
-						/>
+						<Details field="Education" value="CS undergrad@UniTo" />
 					</div>
 				</Reveal>
 			</div>

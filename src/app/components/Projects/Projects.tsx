@@ -59,11 +59,11 @@ export default function Projects() {
 							header={selectHeaderImg(item.header)}
 							icon={item.icon}
 							className={
-								i === 3 || i === 6 || i === 5
+								i === 0 || i === 2
 									? "md:col-span-2"
-									: i === 4
-									? "md:row-span-2"
-									: ""
+									: i === 1
+										? "md:row-span-2"
+										: ""
 							}
 							onClick={() => handleClick(item.link)}
 						/>

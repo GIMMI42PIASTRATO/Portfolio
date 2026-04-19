@@ -63,7 +63,10 @@ export default function Footer() {
 									</a>
 								</li>
 								<li>
-									<a href="#" target="_blank">
+									<a
+										href="https://www.linkedin.com/in/vittorio-bussano-8020a8364"
+										target="_blank"
+									>
 										<TbBrandLinkedin
 											stroke="#51b1f5"
 											style={{
@@ -116,7 +119,7 @@ export default function Footer() {
 									>
 										{item}
 									</a>
-								)
+								),
 							)}
 						</div>
 					</div>

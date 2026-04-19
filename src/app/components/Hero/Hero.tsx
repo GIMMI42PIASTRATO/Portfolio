@@ -19,9 +19,8 @@ export default function Hero() {
 						<p
 							className={`${style.description} ${mulish.className}`}
 						>
-							Hi I&apos;m Vittorio Bussano. An aspiring full-stack
-							web developer and software engineer based in Turin,
-							Italy.
+							Hi, I&apos;m Vittorio Bussano. Full-stack developer
+							& SWE <br /> CS undergrad @ UniTo — Turin, Italy.
 						</p>
 						<span className={style.social}>
 							<a
@@ -30,7 +29,10 @@ export default function Hero() {
 							>
 								<TbBrandGithub />
 							</a>
-							<a href="#" target="_blank">
+							<a
+								href="https://www.linkedin.com/in/vittorio-bussano-8020a8364"
+								target="_blank"
+							>
 								<TbBrandLinkedin />
 							</a>
 						</span>
