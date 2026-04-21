@@ -15,10 +15,7 @@ export default function Footer() {
 					<div className={`${style.footer_cols} text-smol-cursor`}>
 						<div className={style.footer_col}>
 							<div className={style.logo}>
-								<img
-									src="GIMMI42PIASTRATO-PRIDE.png"
-									alt="Logo"
-								/>
+								<img src="/me.png" alt="Logo" />
 								<p className="text-xl font-bold">
 									Vittorio Bussano
 								</p>
