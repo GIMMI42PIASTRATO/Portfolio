@@ -12,7 +12,7 @@ export default function Footer() {
 		<>
 			<footer className={style.footer_container}>
 				<div className={style.box}>
-					<div className={style.footer_cols}>
+					<div className={`${style.footer_cols} text-smol-cursor`}>
 						<div className={style.footer_col}>
 							<div className={style.logo}>
 								<img
